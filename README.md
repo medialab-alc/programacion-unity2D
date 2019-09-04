@@ -10,6 +10,8 @@ En esta primera introducción iremos desarrollando algunos elementos básicos qu
 - [CLASES](#CLASES)
 - [INSTRUCCIONES](#INSTRUCCIONES)
     - [if](#if)
+    - [else](#else)
+- [FLUJO](#FLUJO)
 
 ### VIARIABLES
 Las variables almacenan un tipo de información, el tipo de información depende del tipo de variable.
@@ -180,7 +182,7 @@ if (x == y || contador > 60){ //<<<--------- El operador '||' funciona como un "
 }
 ```
 
-##_else_
+## _else_
 En caso de tener una instrucción 'else', la misma estará siempre ligada a una instrucción 'if', la misma define un segundo grupo de instrucciones a ejecutarse si la condición definida por 'if' no se cumple.
 **Ej:**
 ```C#
