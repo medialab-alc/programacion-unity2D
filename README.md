@@ -29,4 +29,6 @@ Las clases funcionan como contenedores para funciones y variables, nuevamente co
 En Unity cada script contiene una clase específica con la cual define el contenido del mismo. 
 Al crear un nuevo C# Script nos encontraremos siempre con algo como esto en la parte superior:
 
-```public class plataformaHorizontal: MonoBehaviour
+```
+public class plataformaHorizontal: MonoBehaviour
+```
