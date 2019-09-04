@@ -1,5 +1,5 @@
 # Introducción
-Unity maneja un sistema de objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor de para una serie de componentes que pueden ser atados al mismo para modificar y controlar su comportamiento o sus propiedades.
+Unity maneja un sistema orientado a objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor de para una serie de componentes que pueden ser atados al mismo para modificar y controlar su comportamiento o sus propiedades.
 Si bien dichos componentes pueden ser configurados directamente desde el Inspector de manera gráfica, el uso de scripts nos permite (entre otras cosas) ingresar a dichos componentes y modificar sus valores de manera dinámica, de manera de crear comportamientos más complejos e interactivos para cada uno de estos objetos.
 
 En esta primera introducción iremos desarrollando algunos elementos básicos que necesitamos conocer para trabajar con scripts en C# en Unity.
@@ -59,7 +59,7 @@ void Start(){
 **Recordar que siempre y como en la mayoría de los casos en que declaremos o modifiquemos valores en variables, la línea debe terminar de declararse con un punto y coma ;**
 
 ### FUNCIONES
-Las funciones ejecutan una tarea específica para la cual son programadas
+Las funciones o métodos ejecutan una tarea específica para la cual son programadas
 Unity posee funciones predeterminadas que siguen determinadas reglas más allá de la programación que se coloque dentro, pero también es posible crear nuestras propias funciones desde cero.
 Las funciones también tienen un tipo de variable asociado, el cual define el tipo de variable que devuelven.
 
