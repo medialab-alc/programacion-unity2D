@@ -20,9 +20,13 @@ Un tipo de metáfora que se utiliza para comprender mejor las variables es la de
 **Algunos tipos de variables:**
 
 -int: Almacena un número entero
+
 -float: Almacena un número decimal
+
 -bool: Almacena un dato del tipo "verdadero" o "falso"
+
 -char: Almacena un caracter
+
 -string: Almacena una serie de caracteres
 
 Las variables siempre deben ser declaradas con un nombre, cada nombre debe ser único para cada variable y siempre es recomendable utilizar una sintaxis simple y relacionada a la función u objetivo de la variable.
