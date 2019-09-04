@@ -100,3 +100,67 @@ public class NombreDelScript : MonoBehaviour
 }
 ```
 La clase "MonoBehaviour" es la clase básica de la cual derivan todos los scripts en Unity, esta clase ya viene con ciertas funciones y métodos preconfigurados como las que vimos anteriormente (Update(), Start(), FixedUpdate(), etc)
+
+
+### INSTRUCCIONES
+Todas las acciones que realiza un script se expresan en instrucciones. Esto incluye algunas acciones que ya hemos visto en puntos anteriores como declarar una variable, inicializarla o llamar una función.
+Las instrucciones deben generalmente terminar en un punto y coma ";" (al declarar o inicializar una variable, por ejemplo), y los bloques de instrucciones se deben incluir entre llaves "{}" (inicializar una función o hacer una consulta a través de un condicional, lo cual veremos a continuación).
+
+**Algunos tipos de instrucciones:**
+_if_
+La instrucción ```if``` nos permite consultar si una condicion se cumple para ejecutar o no otra instrucción o serie de instrucciones. El uso más común de esta instruccion es para generar condicionales. Imaginemos que tenemos en nuestro código un contador de frames, el cual creamos con el ejemplo simple que vimos en la función ```Update()```.
+Ahora supongamos que tenemos una variable de tipo booleano, la cual queremos que solamente se vuelva positiva en el frame número 60.
+Esto lo podríamos resolver de la siguiente manera:
+```C#
+public class plataformaHorizontal: MonoBehaviour
+{
+  int contador;
+  bool activado;
+  
+  void Start(){
+    contador = 0;
+    activado = false;
+  }
+  
+  void Update(){
+    contador = contador + 1;
+    if (contador == 60){
+      activado = true;
+    }
+  }
+}
+``` 
+Si vamos directamente a la instrucción ```if``` lo que está sucediendo es lo siguiente
+```C#
+if (contador == 60){ //<<<--------- Si se cumple esta condición (que el entero 'contador' sea igual a 60)
+  activado = true;   //<<<--------- Entonces activado se vuelve true
+}
+```
+El conjunto de instrucciones dentro de un 'if' debe estar contenido entre llaves "{}", mientras que la condición debe declararse entre paréntesis.
+Habrán notado que la manera de consultar la igualdad en el if está con un doble signo de igual "==". 
+Esto se debe a que la manera en la que los operadores funcionan en C# es que el operador "=" asigna un valor, es decir, si tenemos en nuestro código ```x = y```, lo que estamos haciendo es asignando el valor de la variable X y la variable Y. El operador para chequear la igualdad es "==", el cual funciona como un booleano, si los datos entre la variable que esté antes y la que esté después del operador son iguales, entonces devuelve un "true" de lo contrario devuelve "false".
+
+Algunos ejemplos:
+```C#
+if (x == y){ //<<<--------- "Si x es igual a y"
+}
+
+if (x <= y){ //<<<--------- "Si x es menor o igual a x"
+}
+
+if (x > y){ //<<<--------- "Si x es mayor a y"
+}
+
+if (x != y){ //<<<--------- "Si x es distinto de y"
+}
+
+if (booleano){ //<<<--------- "Si la variable de tipo 'bool' tiene un valor de true
+}
+
+if (booleano == true){ //<<<--------- Otra manera de representar el ejemplo anterior
+}
+
+if (!booleano){ //<<<--------- "Si la variable de tipo 'bool' tiene un valor de false
+}
+```
+
