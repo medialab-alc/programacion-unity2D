@@ -9,7 +9,7 @@ En esta primera introducción iremos desarrollando algunos elementos básicos qu
 - [FUNCIONES](#FUNCIONES)
 - [CLASES](#CLASES)
 - [INSTRUCCIONES](#INSTRUCCIONES)
-      - [if](#_if_)
+          - [if](#if)
 
 ### VIARIABLES
 Las variables almacenan un tipo de información, el tipo de información depende del tipo de variable.
