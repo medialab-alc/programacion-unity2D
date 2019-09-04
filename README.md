@@ -9,7 +9,7 @@ En esta primera introducción iremos desarrollando algunos elementos básicos qu
 - [FUNCIONES](#FUNCIONES)
 - [CLASES](#CLASES)
 - [INSTRUCCIONES](#INSTRUCCIONES)
-      - [Gitumentation and the developers market](#gitumentation-and-the-developers-market)
+      - [if](#_if_)
 
 ### VIARIABLES
 Las variables almacenan un tipo de información, el tipo de información depende del tipo de variable.
@@ -114,7 +114,7 @@ Todas las acciones que realiza un script se expresan en instrucciones. Esto incl
 Las instrucciones deben generalmente terminar en un punto y coma ";" (al declarar o inicializar una variable, por ejemplo), y los bloques de instrucciones se deben incluir entre llaves "{}" (inicializar una función o hacer una consulta a través de un condicional, lo cual veremos a continuación).
 
 **Algunos tipos de instrucciones:**
-##_if_
+## _if_
 La instrucción ```if``` nos permite consultar si una condicion se cumple para ejecutar o no otra instrucción o serie de instrucciones. El uso más común de esta instruccion es para generar condicionales. Imaginemos que tenemos en nuestro código un contador de frames, el cual creamos con el ejemplo simple que vimos en la función ```Update()```.
 Ahora supongamos que tenemos una variable de tipo booleano, la cual queremos que solamente se vuelva positiva en el frame número 60.
 Esto lo podríamos resolver de la siguiente manera:
