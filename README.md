@@ -238,7 +238,7 @@ void Update(){
 -Si deja de correr (su velocidad baja de 60), contador vuelve a 0
 -Si durante 100 frames (ya que la función es llamada dentro del Update()) permanece corriendo, el booleano cansado se vuelve true y su velocidad se reduce a 20 forzadamente.
 
-###FLUJO
+### FLUJO
 Se le llama flujo al orden en que un programa ejecuta las instrucciones que se le dan. Las líneas dentro de un conjunto de instrucciones se ejecutan de manera lineal y ordenada, sin embargo el flujo de un programa puede variar dependiendo de cómo interactúa este con las instrucciones y los inputs que recibe.
 
 Por ejemplo, dentro de un ```void Update()``` cada línea de código se ejecuta de manera ordenada una vez por frame cuando la función es llamada, por lo que las instrucciones que estén al comienzo se ejecutarán siempre primero que aquellas que estén debajo.
