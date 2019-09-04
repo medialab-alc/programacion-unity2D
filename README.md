@@ -34,7 +34,7 @@ string nombre = "Carlos"
 ```C#
 int velX;
 bool acelerar;
-string nombre"
+string nombre;
 
 void Start(){
   velX = 5;
@@ -174,5 +174,57 @@ if (x == y || contador > 60){ //<<<--------- El operador '||' funciona como un "
 ```
 
 _else_
+En caso de tener una instrucción 'else', la misma estará siempre ligada a una instrucción 'if', la misma define un segundo grupo de instrucciones a ejecutarse si la condición definida por 'if' no se cumple.
+**Ej:**
+```C#
+void Update(){
+  if (velocidad > 60){ //<<<---------- Se consulta en cada frame si la variable 'velocidad' es mayor a 60
+    corriendo = true;   //<<<--------- En caso positivo, se "activa" el booleano 'corriendo'
+  } else {
+    corriendo = false;  //<<<--------- En caso negativo, se le asigna el valor false.
+  }
+}
+```
+El else debe siempre colocarse luego de cerrada la llave al final del if, y el conjunto de instrucciones asignado al 'else' debe también estar contenido entre llaves.
 
+En caso de querer más de 2 opciones, se puede utilizar la instrucción ```else if```, la misma funciona como un else, pero a su vez hace una nueva consulta.
+**Ej:**
+```C#
+void Update(){
+  if (velocidad < 20){
+    caminando = true;
+    trotando = false;  
+    corriendo = false;
+  } else if (velocidad >= 20 && velocidad < 60) {
+    caminando = false;
+    trotando = true;
+    corriendo = false;
+  } else {
+    caminando = false;
+    trotando = false;
+    corriendo = true;
+  }
+}
+```
 
+**Las instrucciones pueden anidarse**
+Una instrucción 'if' puede contener otro 'if', lo mismo con cualquier otro tipo de conjunto de instrucciones.
+**Ej:**
+```C#
+void Update(){
+  if (velocidad > 60){
+    corriendo = true;
+    contador = contador + 1;
+    if (contador > 100){
+      cansado = true;
+      velocidad = 20;
+    }
+  } else {
+    contador = 0;
+  }
+}
+```
+-En este ejemplo tenemos un supuesto personaje que cuando su variable velocidad es mayor a 60 se considera que está Corriendo. 
+-A su vez, cada frame que su velocidad permanece por encima de 60 comienza a sumar la variable "contador".
+-Si deja de correr (su velocidad baja de 60), contador vuelve a 0
+-Si durante 100 frames (ya que la función es llamada dentro del Update()) permanece corriendo, el booleano cansado se vuelve true y su velocidad se reduce a 20 forzadamente.
