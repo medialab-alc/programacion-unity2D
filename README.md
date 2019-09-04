@@ -164,3 +164,15 @@ if (!booleano){ //<<<--------- "Si la variable de tipo 'bool' tiene un valor de 
 }
 ```
 
+Por último, se pueden colocar múltiples condiciones dentro de un mismo 'if', los operadores más básicos para hacer esto es para consultar que se cumpla más de una condición (_condición a se cumple **Y** condición b se cumple_), o que se cumpla al menos una de varias condiciones (_condición a se cumple **O** condición b se cumple_)
+Esto se representa de la siguiente manera:
+```C#
+if (x == y && contador > 60){ //<<<--------- El operador '&&' funciona como un "y", ambas condiciones deben cumplirse
+}
+if (x == y || contador > 60){ //<<<--------- El operador '||' funciona como un "o", al menos una de las condiciones debe cumplirse
+}
+```
+
+_else_
+
+
