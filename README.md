@@ -107,7 +107,7 @@ Todas las acciones que realiza un script se expresan en instrucciones. Esto incl
 Las instrucciones deben generalmente terminar en un punto y coma ";" (al declarar o inicializar una variable, por ejemplo), y los bloques de instrucciones se deben incluir entre llaves "{}" (inicializar una función o hacer una consulta a través de un condicional, lo cual veremos a continuación).
 
 **Algunos tipos de instrucciones:**
-_if_
+##_if_
 La instrucción ```if``` nos permite consultar si una condicion se cumple para ejecutar o no otra instrucción o serie de instrucciones. El uso más común de esta instruccion es para generar condicionales. Imaginemos que tenemos en nuestro código un contador de frames, el cual creamos con el ejemplo simple que vimos en la función ```Update()```.
 Ahora supongamos que tenemos una variable de tipo booleano, la cual queremos que solamente se vuelva positiva en el frame número 60.
 Esto lo podríamos resolver de la siguiente manera:
@@ -173,7 +173,7 @@ if (x == y || contador > 60){ //<<<--------- El operador '||' funciona como un "
 }
 ```
 
-_else_
+##_else_
 En caso de tener una instrucción 'else', la misma estará siempre ligada a una instrucción 'if', la misma define un segundo grupo de instrucciones a ejecutarse si la condición definida por 'if' no se cumple.
 **Ej:**
 ```C#
@@ -228,3 +228,45 @@ void Update(){
 -A su vez, cada frame que su velocidad permanece por encima de 60 comienza a sumar la variable "contador".
 -Si deja de correr (su velocidad baja de 60), contador vuelve a 0
 -Si durante 100 frames (ya que la función es llamada dentro del Update()) permanece corriendo, el booleano cansado se vuelve true y su velocidad se reduce a 20 forzadamente.
+
+###FLUJO
+Se le llama flujo al orden en que un programa ejecuta las instrucciones que se le dan. Las líneas dentro de un conjunto de instrucciones se ejecutan de manera lineal y ordenada, sin embargo el flujo de un programa puede variar dependiendo de cómo interactúa este con las instrucciones y los inputs que recibe.
+
+Por ejemplo, dentro de un ```void Update()``` cada línea de código se ejecuta de manera ordenada una vez por frame cuando la función es llamada, por lo que las instrucciones que estén al comienzo se ejecutarán siempre primero que aquellas que estén debajo.
+Las instrucciones con condicionales o aquellas que llaman otras funciones son ejemplos de instrucciones que pueden complejizar y alterar el flujo de un programa.
+
+**Ej:**
+Imaginemos que tenemos un pequeño juego en el que el personaje debe llegar al final de un laberinto y el puntaje depende de qué tan rápido lo hace. 
+Para esto vamos a usar una variable predeterminada en Unity llamada ```Time.deltaTime``` , la cual nos da el valor en segundos entre el frame actual y el anterior.
+El tiempo lo mediremos en relación a cuántos segundos demora en llegar, mediante el float "contador".
+Tendremos un booleano "final", que se activará externamente cuando el personaje llegue al final del laberinto.
+Por último tendremos un float "mejorTiempo" donde queremos guardar el mejor tiempo que el personaje haya alcanzado.
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class miScript: MonoBehaviour
+{
+  float contador;
+  float tiempoActual;
+  float mejorTiempo;
+  bool final;
+  
+  void Start(){  //<<<<---------------------------------El void Start() se ejecuta una vez en el primer frame
+    contador = 0;
+    resultado = 0;
+    activar = false;
+  }
+  
+  void FixedUpdate(){ //<<<<----------------------------El void Update() comienza a correr en cada frame
+    contador = contador + Time.deltaTime;   //<<<<------En cada frame, sumamos a la variable contador el tiempo entre ese frame y el anterior
+    if (final){//<<<<-----------------------------------Chequeamos en cada frame si el personaje llegó al final
+      tiempoActual = contador; //<<<<-------------------Si lo hizo, almacenamos el tiempo en "tiempoActual"
+      if (tiempoActual < mejorTiempo){ //<<<<-----------Chequeamos si el tiempo conseguido es mejor al mejor tiempo logrado
+        mejorTiempo = tiempoActual; //<<<<--------------En caso de que lo sea, establecemos "tiempoActual, como el mejor tiempo
+      }
+      contador = 0;
+    }
+  }
+}
