@@ -253,20 +253,23 @@ public class miScript: MonoBehaviour
   float mejorTiempo;
   bool final;
   
-  void Start(){  //<<<<---------------------------------El void Start() se ejecuta una vez en el primer frame
+  void Start(){                            //<<<<------El void Start() se ejecuta una vez en el primer frame
     contador = 0;
     resultado = 0;
     activar = false;
   }
   
-  void FixedUpdate(){ //<<<<----------------------------El void Update() comienza a correr en cada frame
-    contador = contador + Time.deltaTime;   //<<<<------En cada frame, sumamos a la variable contador el tiempo entre ese frame y el anterior
-    if (final){//<<<<-----------------------------------Chequeamos en cada frame si el personaje llegó al final
-      tiempoActual = contador; //<<<<-------------------Si lo hizo, almacenamos el tiempo en "tiempoActual"
-      if (tiempoActual < mejorTiempo){ //<<<<-----------Chequeamos si el tiempo conseguido es mejor al mejor tiempo logrado
-        mejorTiempo = tiempoActual; //<<<<--------------En caso de que lo sea, establecemos "tiempoActual, como el mejor tiempo
+  void Update(){                      //<<<<------El void Update() comienza a correr en cada frame
+    contador = contador + Time.deltaTime;  //<<<<------En cada frame, sumamos a la variable contador el tiempo entre ese frame y el anterior
+    if (final){                            //<<<<------Chequeamos en cada frame si el personaje llegó al final
+      tiempoActual = contador;             //<<<<------Si lo hizo, almacenamos el tiempo en "tiempoActual"
+      if (tiempoActual < mejorTiempo){     //<<<<------Chequeamos si el tiempo conseguido es mejor al mejor tiempo logrado
+        mejorTiempo = tiempoActual;        //<<<<------En caso de que lo sea, establecemos "tiempoActual, como el mejor tiempo
       }
-      contador = 0;
+      contador = 0;                        //<<<<------Luego de chequear si hay un nuevo mejor tiempo, devolvemos contador a 0 para comenzar de nuevo.
     }
   }
 }
+```
+
+En este ejemplo, el Update() se ejecuta de manera lineal y ordenada, instrucción por instrucción. Sin embargo varias de esas instrucciones dependen de que se cumplan las condiciones definidas por los _if_, si esto no sucede, el programa continua en la instrucción siguiente.
