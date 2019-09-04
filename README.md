@@ -43,7 +43,7 @@ Esto puede hacerse directamente cuando la variable es declarada, como en otra pa
 ```C#
 int velX = 5;
 bool acelerar = true;
-string nombre = "Carlos"
+string nombre = "Carlos";
 ```
 ```C#
 int velX;
