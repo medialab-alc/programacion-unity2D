@@ -2,7 +2,14 @@
 Unity maneja un sistema de objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor de para una serie de componentes que pueden ser atados al mismo para modificar y controlar su comportamiento o sus propiedades.
 Si bien dichos componentes pueden ser configurados directamente desde el Inspector de manera gráfica, el uso de scripts nos permite (entre otras cosas) ingresar a dichos componentes y modificar sus valores de manera dinámica, de manera de crear comportamientos más complejos e interactivos para cada uno de estos objetos.
 
-En esta primera introducción veremos los componentes básicos que necesitamos conocer para trabajar con scripts en C# en Unity, utilizando como base los scripts que estuvimos creando para las plataformas.
+En esta primera introducción iremos desarrollando algunos elementos básicos que necesitamos conocer para trabajar con scripts en C# en Unity.
+
+### Tabla de contenido 
+- [VARIABLES](#VARIABLES)
+- [FUNCIONES](#FUNCIONES)
+- [CLASES](#CLASES)
+- [INSTRUCCIONES](#INSTRUCCIONES)
+      - [Gitumentation and the developers market](#gitumentation-and-the-developers-market)
 
 ### VIARIABLES
 Las variables almacenan un tipo de información, el tipo de información depende del tipo de variable.
