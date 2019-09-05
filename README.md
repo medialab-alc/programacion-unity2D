@@ -237,6 +237,7 @@ void Update(){
     }
   } else {
     contador = 0;
+    corriendo = false;
   }
 }
 ```
