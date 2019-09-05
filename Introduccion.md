@@ -241,8 +241,11 @@ void Update(){
 }
 ```
 -En este ejemplo tenemos un supuesto personaje que cuando su variable velocidad es mayor a 60 se considera que está Corriendo. 
+
 -A su vez, cada frame que su velocidad permanece por encima de 60 comienza a sumar la variable "contador".
+
 -Si deja de correr (su velocidad baja de 60), contador vuelve a 0
+
 -Si durante 100 frames (ya que la función es llamada dentro del Update()) permanece corriendo, el booleano cansado se vuelve true y su velocidad se reduce a 20 forzadamente.
 
 ### FLUJO
