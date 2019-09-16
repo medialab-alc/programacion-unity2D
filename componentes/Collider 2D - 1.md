@@ -2,4 +2,14 @@ El collider 2D define la forma de un objeto 2D en relación al sistema de detecc
 
 En general la forma del collider dependerá de la función que se le quiera dar y de la superficie de colisión que se quiera que el objeto tenga, dentro del juego no es necesario que un collider tenga exactamente la misma figura del objeto cuyos límites representa, generalmente es más eficiente definir una forma básica aproximada a la forma del objeto, lo cual es generalmente indistinguible dentro de la experiencia del juego.
 
+# Propiedades
+[...]
+
+# Variables
+[...]
+
+# Funciones
+[...]
+
+# Ejemplo
 [...]
