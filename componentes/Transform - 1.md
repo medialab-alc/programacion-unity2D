@@ -24,12 +24,38 @@ position | El vector que representa la posición del transform en el mundo
 rotation | El quaternion que define la rotación de los ejes del transform con respecto al mundo
 up | Representa el eje verde del transform
 
+**Nota**: Al acceder por ejemplo a las variables de tipo Vector3 o Vector2, podemos especificar valores específicos a los que querramos acceder. Por ejemplo si quisiéramos acceder solo a la posición X del transform, la variable que buscamos es *position.x* 
+
 ### Funciones Públicas
+Lo que se encuentra entre paréntesis es el tipo de dato que debemos darle a la función al llamarla.
+
 Variable | Función
 ------------ | -------------
-GetChild | Devuelve un transform hijo según el índice que ingresemos al llamar la función
-IsChildOf | Devuelve un booleano que será verdadero o falso dependiendo si el transform actual es hijo del transform dado
-LookAt | Gira el transform para que el vector **forward** apunte en la dirección del transform dado al llamar la función.
-rotate | Aplica una rotación en grados sobre los ejes del objeto.
-SetParent | Configura el padre del transform actual.
-Translate | Mueve el transform en la dirección y distancia dada por el vector dado.
+GetChild(int) | Devuelve un transform hijo según el índice (dado por el int) que ingresemos al llamar la función
+IsChildOf(Transfrom) | Devuelve un booleano que será verdadero o falso dependiendo si el transform actual es hijo del transform dado
+LookAt(Transform) | Gira el transform para que el vector **forward** apunte en la dirección del transform dado al llamar la función.
+rotate(Vector3) | Aplica una rotación en grados sobre los ejes del objeto.
+SetParent(Transform) | Configura el padre del transform actual.
+Translate(Vector3) | Mueve el transform en la dirección y distancia dada por el vector dado.
+
+
+
+# EJEMPLO
+
+```C#
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    void Start()
+    {    
+        // Colocamos el objeto en la posición que querramos al iniciar el programa.
+        gameObject.transform.position = new Vector3(0.0f, 0.0f, 0.0f); 
+    }
+    
+    void Update(){
+    // Trasladamos al objeto hacia adelante a una unidad por segundo.
+    transform.Translate(Vector3.forward * Time.deltaTime);
+    }
+}
+```
