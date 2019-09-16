@@ -1,8 +1,0 @@
-El componente transform determina la posición, rotación y escala de un objeto dentro de la escena. 
-Todo gameObject cuenta con un componente dle tipo Transform.
-
-# Propiedades
-
-Position: 	Posición del Transform en coordenadas X, Y, Z.  
-Rotation: 	Rotación del Transform alrededor de los ejes X, Y, Z, medido en grados.  
-Scale: 	Scale (Escala) del Transform a lo largo de los ejes X, Y y Z. Un valor de “1” es el tamaño original (el tamaño con el cual el objeto fue importado).  
