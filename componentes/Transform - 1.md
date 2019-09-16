@@ -54,8 +54,8 @@ public class Example : MonoBehaviour
     }
     
     void Update(){
-    // Trasladamos al objeto hacia adelante a una unidad por segundo.
-    transform.Translate(Vector3.forward * Time.deltaTime);
+        // Trasladamos al objeto hacia adelante a una unidad por segundo.
+        transform.Translate(Vector3.forward * Time.deltaTime);
     }
 }
 ```
