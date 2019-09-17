@@ -44,7 +44,11 @@ usedByComposite | Determina si el collider es usado o no por un CompositeCollide
 usedByEffector | Determina si el collider es usado o no por un effector adjunto o no.
 
 # Funciones
-[...]
+Nombre | Función
+------------ | -------------
+Distance(Collider2D collider) | Calcula la separación mínima entre el collider actual y el que se le indique (o en su defecto el más cercano).
+IsTouching(Collider2D collider) | Revisa si este collider está tocando el collider o no.
+
 
 # Ejemplo
 [...]
