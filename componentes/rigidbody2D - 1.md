@@ -26,16 +26,16 @@ Linear Drag | El coeficiente de fricción que afecta el movimiento de posición.
 Angular Drag | El coeficiente de fricción que afecta el movimiento de rotación.
 Gravity Scale | Define el grado en que un GameObject se ve afectado por la gravedad.
 Collision Detection | Define la manera en la que el GameObject calcula los contactos y la posible superposición de los colliders luego de una actualización de físicas.
-        Discrete | Cuando configure Collision Detection en Discrete, los GameObjects con Rigidbody 2Ds y Collider 2Ds pueden superponerse entre sí durante una actualización de física si se están moviendo lo suficientemente rápido. Los contactos de colisión solo se generan en la nueva posición.
-        Continuous | Cuando Collision Detection se establece en Continuous, los GameObjects con Rigidbody 2Ds y Collider 2Ds no se atraviesan durante una actualización. En cambio, Unity calcula el primer punto de impacto de cualquiera de los Collider 2D, y mueva el GameObject allí. Esto requiere más tiempo de CPU que Discrete.
+--Discrete | Cuando configure Collision Detection en Discrete, los GameObjects con Rigidbody 2Ds y Collider 2Ds pueden superponerse entre sí durante una actualización de física si se están moviendo lo suficientemente rápido. Los contactos de colisión solo se generan en la nueva posición.
+--Continuous | Cuando Collision Detection se establece en Continuous, los GameObjects con Rigidbody 2Ds y Collider 2Ds no se atraviesan durante una actualización. En cambio, Unity calcula el primer punto de impacto de cualquiera de los Collider 2D, y mueva el GameObject allí. Esto requiere más tiempo de CPU que Discrete.
 Sleeping Mode | Define cómo el GameObject “duerme” para ahorrar tiempo del procesador cuando está en reposo.
-        Never Sleep | Sleeping está desactivado (esto debe evitarse siempre que sea posible, ya que puede afectar los recursos del sistema).
-        *Start Awake* | El GameObject inicialmente está despierto.
-        *Start Asleep* | El GameObject está inicialmente durmiendo pero se puede despertar por colisiones.
+--Never Sleep | Sleeping está desactivado (esto debe evitarse siempre que sea posible, ya que puede afectar los recursos del sistema).
+--Start Awake | El GameObject inicialmente está despierto.
+--Start Asleep | El GameObject está inicialmente durmiendo pero se puede despertar por colisiones.
 Interpolate | Defina cómo se interpola el movimiento del GameObject entre las actualizaciones de físicas (útil cuando el movimiento tiende a ser desigual).
-        *None* | No se aplica ningún movimiento suavizado.
-        *Interpolate* | El movimiento se suaviza en función de las posiciones de GameObject en cuadros anteriores
-        *Extrapolate*	| El movimiento es suavizado basado en una estimación de su posición en el siguiente cuadro (Frame).
+--None | No se aplica ningún movimiento suavizado.
+--Interpolate | El movimiento se suaviza en función de las posiciones de GameObject en cuadros anteriores
+--Extrapolate	| El movimiento es suavizado basado en una estimación de su posición en el siguiente cuadro (Frame).
 Constraints | Se define cualquier restricción en el movimiento del Rigidbody 2D.
 Freeze Position | Permite detener el movimiento del Rigidbody 2D en los ejes X e Y del mundo.
 Freeze Rotation | Permite detener la rotación del Rigidbody2D alrededor de los ejes Z.
