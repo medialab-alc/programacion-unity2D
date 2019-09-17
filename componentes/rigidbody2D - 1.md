@@ -15,6 +15,31 @@ Un Rigidbody 2D Kinematic todavía se mueve a través de su velocidad, pero la v
 
 -**Static**: Un Static Rigidbody 2D está diseñado para no moverse en absoluto en la simulación; si algo colisiona con él, un Static Rigidbody 2D se comporta como un objeto inamovible (como si tuviera una masa infinita). También es el tipo de cuerpo menos intensivo en recursos para usar. Un cuerpo Static solo colisiona con Rigidbody2D Dynamic. Hacer que dos Rigidbody2D Static colisionen no es soportado ya que no están diseñados para moverse.
 
+Componente | Función
+--------|--------
+Body Type | Establece el tipo de Body Type para este rigidbody (Dynamic, Kinematic o Static)
+Material | Para aplicar un Physics Material común a todos los collider2D ligados a este Rigidbody, si al Collider2D se le especifica un material propio, utilizará ese, en caso de tener el campo de material vacío, utilizará (de haberlo) el indicado por el Rigidbody2D al que está ligado.
+Simulated | Esta casilla está marcada por defecto. En caso de desmarcarse, el Rigidbody2D dejará de formar parte de la simulación de físicas, haciendo que no se vea afectado por fuerzas y gravedad y que la detección de colisiones y puntos de contacto se interrumpa.
+Use Auto Mass | Marque la casilla si desea que un Rigidbody 2D detecte automáticamente la masa del GameObject de su Collider 2D.
+Mass | Define la masa del Rigidbody 2D. Esta opción está desactivada si seleccionó Use Auto Mass.
+Linear Drag | El coeficiente de fricción que afecta el movimiento de posición.
+Angular Drag | El coeficiente de fricción que afecta el movimiento de rotación.
+Gravity Scale | Define el grado en que un GameObject se ve afectado por la gravedad.
+Collision Detection | Define la manera en la que el GameObject calcula los contactos y la posible superposición de los colliders luego de una actualización de físicas.
+        *Discrete* | Cuando configure Collision Detection en Discrete, los GameObjects con Rigidbody 2Ds y Collider 2Ds pueden superponerse entre sí durante una actualización de física si se están moviendo lo suficientemente rápido. Los contactos de colisión solo se generan en la nueva posición.
+        *Continuous* | Cuando Collision Detection se establece en Continuous, los GameObjects con Rigidbody 2Ds y Collider 2Ds no se atraviesan durante una actualización. En cambio, Unity calcula el primer punto de impacto de cualquiera de los Collider 2D, y mueva el GameObject allí. Esto requiere más tiempo de CPU que Discrete.
+Sleeping Mode | Define cómo el GameObject “duerme” para ahorrar tiempo del procesador cuando está en reposo.
+        *Never Sleep* | Sleeping está desactivado (esto debe evitarse siempre que sea posible, ya que puede afectar los recursos del sistema).
+        *Start Awake* | El GameObject inicialmente está despierto.
+        *Start Asleep* | El GameObject está inicialmente durmiendo pero se puede despertar por colisiones.
+Interpolate | Defina cómo se interpola el movimiento del GameObject entre las actualizaciones de físicas (útil cuando el movimiento tiende a ser desigual).
+        *None* | No se aplica ningún movimiento suavizado.
+        *Interpolate* | El movimiento se suaviza en función de las posiciones de GameObject en cuadros anteriores
+        *Extrapolate*	| El movimiento es suavizado basado en una estimación de su posición en el siguiente cuadro (Frame).
+Constraints | Se define cualquier restricción en el movimiento del Rigidbody 2D.
+Freeze Position | Permite detener el movimiento del Rigidbody 2D en los ejes X e Y del mundo.
+Freeze Rotation | Permite detener la rotación del Rigidbody2D alrededor de los ejes Z.
+
 
 # Variables
 Nombre | Tipo | Dato
