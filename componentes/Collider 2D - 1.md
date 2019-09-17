@@ -18,13 +18,30 @@ Composite Collider 2D | Une todas las formas de los Polygon Collider2D o Box Col
 Propiedad | Función
 ------------ | -------------
 Material | Un Physics Material que determina las propiedades de las colisiones, tales como la fricción y el rebote.
-Is Trigger | Determina si el collider se comporta como Trigger
+Is Trigger | Determina si el collider se comporta como Trigger.
+Used by Composite | [Box o Polygon Collider] Al activar esta casilla el collider pasa a estar controlado por el Composite Collider que esté ligado al GameObject.
 Used by Effector | Define si el collider es utilizado por un effector adjunto.
 Offset | La variación local de la geometría del collider.
 Radius | [Circle Collider] Radio del círculo en unidades del espacio local.
+Size | [Box Collider] El tamaño de la caja (rectángulo) en unidades del espacio local.
+Edge Radius | Controla un radio alrededor de los bordes, de modo que los vértices son circulares.
+Direction | [Capsule Collider] Define la dirección de la cápsula (Es decir, el sentido en el que se encuentran las terminaciones semicirculares
 
 # Variables
-[...]
+Nombre | Dato
+------------ | -------------
+attachedRigidbody | Almacena el Rigidbody2D ligado al que el collider responde.
+bounciness | El valor de rebote utilizado por el collider.
+bounds | El área delimitadora en el espacio del mundo del collider.
+composite |	Toma el CompositeCollider2D que esté disponible para ser ligado al collider.
+density |	La densidad del collider utilizada para calcular su masa (cuando la masa automática está habilitada).
+friction |	El valor de fricción utilizado por el collider.
+isTrigger | Booleano que determina si el collider está siendo utilizado como trigger o no.
+offset | La variación local de la geometría del collider.
+shapeCount | La cantidad de regiones con formas separadas en el collider.
+sharedMaterial | El PhysicsMaterial2D que esté aplicado al collider.
+usedByComposite | Determina si el collider es usado o no por un CompositeCollider2D.
+usedByEffector | Determina si el collider es usado o no por un effector adjunto o no.
 
 # Funciones
 [...]
