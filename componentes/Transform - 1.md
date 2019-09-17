@@ -14,7 +14,7 @@ Todo objeto en la escena posee un transform, y a su vez cada transform permite t
 La clase transform viene ya con una serie de variables y funciones públicas predeterminadas, en esta primera instancia listaremos solo aquellas que vamos a utilizar con mayor frecuencia:
 
 ### Variables
-Variable | Función
+Nombre | Dato
 ------------ | -------------
 forward | Es un vector que representa el eje azul del transform en la escena, indica la dirección que el objeto considera "hacia adelante"
 localPosition | Es un vector dado por los valores de posición del transform **relativo al transform padre**
@@ -29,7 +29,7 @@ up | Representa el eje verde del transform
 ### Funciones Públicas
 Lo que se encuentra entre paréntesis es el tipo de dato que debemos darle a la función al llamarla.
 
-Variable | Función
+Nombre | Función
 ------------ | -------------
 GetChild(int) | Devuelve un transform hijo según el índice (dado por el int) que ingresemos al llamar la función
 IsChildOf(Transfrom) | Devuelve un booleano que será verdadero o falso dependiendo si el transform actual es hijo del transform dado
