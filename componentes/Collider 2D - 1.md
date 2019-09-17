@@ -43,12 +43,22 @@ sharedMaterial | El PhysicsMaterial2D que esté aplicado al collider.
 usedByComposite | Determina si el collider es usado o no por un CompositeCollider2D.
 usedByEffector | Determina si el collider es usado o no por un effector adjunto o no.
 
-# Funciones
+# Funciones Públicas
 Nombre | Función
 ------------ | -------------
 Distance(Collider2D collider) | Calcula la separación mínima entre el collider actual y el que se le indique (o en su defecto el más cercano).
 IsTouching(Collider2D collider) | Revisa si este collider está tocando el collider o no.
 
+# Mensajes
+
+Nombre | Función
+------------ | -------------
+OnCollisionEnter2D(Collision2D) | Se envia cuando un collider entrante entra en contacto con el collider de este objeto
+OnCollisionExit2D(Collision2D) | Enviado cuando un collider en otro objeto deja de tocar el collider de este objeto
+OnCollisionStay2D(Collision2D) | Enviado cada frame donde un collider en otro objeto está tocando el collider de este objeto
+OnTriggerEnter2D(Collider2D) | Enviado cuando otro objeto ingresa a un trigger collider adjunto a este objeto
+OnTriggerExit2D(Collider2D) | Enviado cuando otro objeto deja un trigger collider adjunto a este objeto
+OnTriggerStay2D(Collider2D) | Enviado cada frame donde otro objeto está dentro de un trigger collider adjunto a este objeto
 
 # Ejemplo
 [...]
