@@ -29,6 +29,8 @@ Un tipo de metáfora que se utiliza para comprender mejor las variables es la de
 
 -string: Almacena una serie de caracteres
 
+-Vector2: Almacena un par coordenadas x e y que definen un vector de dos dimensiones
+
 Las variables siempre deben ser declaradas con un nombre, cada nombre debe ser único para cada variable y siempre es recomendable utilizar una sintaxis simple y relacionada a la función u objetivo de la variable.
 **Ej:**
 ```C#
