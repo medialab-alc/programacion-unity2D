@@ -8,11 +8,17 @@ public class jugadorMove: MonoBehaviour
     public float dirX;
     public float moveSpeed;
     public float velSalto;
+    
+    float posX;
+    float posY;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // Guardamos la posición inicial del personaje en el primer frame en el que se ejecuta el juego.
+        posX = transform.position.x;
+        posY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -23,6 +29,11 @@ public class jugadorMove: MonoBehaviour
         if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
         {
             rb.AddForce(Vector2.up * velSalto, ForceMode2D.Impulse);
+        }
+        // Si se presiona la tecla R, reseteamos la posición y velocidad del personaje a su posición inicial
+        if (Input.GetKeyDown(KeyCode.R)){
+            transform.position = new Vector2(posX,posY);
+            rb.velocity = new Vector2(0,0);
         }
     }
 
