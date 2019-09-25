@@ -23,4 +23,5 @@ GetMouseButtonDown(int) | Devuelve true durante el frame que el usuario presiono
 GetMouseButtonUp(int) | Devuelve true durante el frame que el usuario soltó el botón del mouse dado.
 
 **Nota 1: En todos los casos de GetAxis, GetButton o GetKey, el string que se provee a la función debe corresponder con el nombre dado a dicho eje, botón o tecla, dichos nombres pueden verse en el Input Manager**
-**Nota 2: En el caso de GetMouseButton, el número entero dado es uno de 3 opciones: 0 representa al botón izquierdo, 1 representa al botón derecho y 2 representa al botón central del mouse.
+
+**Nota 2: En el caso de GetMouseButton, el número entero dado es uno de 3 opciones: 0 representa al botón izquierdo, 1 representa al botón derecho y 2 representa al botón central del mouse.**
