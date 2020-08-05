@@ -62,7 +62,10 @@ void Start(){
 **Recordar que siempre y como en la mayoría de los casos en que declaremos o modifiquemos valores en variables, la línea debe terminar de declararse con un punto y coma ;**
 
 ### FUNCIONES
-Las funciones o métodos ejecutan una tarea específica para la cual son programadas
+Una función o rutina es un subalgoritmo que forma parte del programa principal y que se encarga de una tarea específica.
+Se trata de un conjunto de instrucciones predefinidas, definido por un nombre y que puede ser llamado desde cualquier parte de nuestro programa.
+Una función puede recibir un dato del programa (variables) y procesarlo para devolver nuevo dato acorde a la tarea que se esté realizando.
+
 Unity posee funciones predeterminadas que siguen determinadas reglas más allá de la programación que se coloque dentro, pero también es posible crear nuestras propias funciones desde cero.
 Las funciones también tienen un tipo de variable asociado, el cual define el tipo de variable que devuelven.
 
