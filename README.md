@@ -14,8 +14,9 @@ En esta primera introducción iremos desarrollando algunos elementos básicos qu
 - [FLUJO](#FLUJO)
 
 ### VIARIABLES
-Las variables almacenan un tipo de información, el tipo de información depende del tipo de variable.
-Un tipo de metáfora que se utiliza para comprender mejor las variables es la de imaginarlas como cajas, cada variable es una caja que contiene un tipo de información, y cada tipo de información requiere un tipo de caja distinta.
+Una variable es un elemento que nos permite almacenar información de manera dinámica en la memoria de la computadora.
+Normalmente se le asigna un nombre con el cual se asocia esa información para luego acceder a ella desde cualquier parte del programa y utilizarla o modificarla.
+Las variables también están asociadas generalmente a un tipo de dato
 
 **Algunos tipos de variables:**
 
