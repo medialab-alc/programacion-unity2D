@@ -1,4 +1,4 @@
-El contenido de este repositorio es material complementario y de repaso para lo visto durante las clases. No reemplaza el contenido del curso y los términos y elementos de programación explicados no están desarrollados en su totalidad, se trata de material de estudio funcional al curso de Programación para Unity 2D.
+NOTA: El contenido de este repositorio es material complementario y de repaso para lo visto durante las clases. No reemplaza el contenido del curso y los términos y elementos de programación explicados no están desarrollados en su totalidad, se trata de material de estudio funcional al curso de Programación para Unity 2D.
 
 # Introducción
 Unity maneja un sistema orientado a objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor para una serie de componentes que pueden ser asociados al mismo para modificar y controlar su comportamiento o sus propiedades.
