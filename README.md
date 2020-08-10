@@ -159,11 +159,11 @@ if (contador == 60){ //<<<--------- Si se cumple esta condición (que el entero 
   activado = true;   //<<<--------- Entonces activado se vuelve true
 }
 ```
-El conjunto de instrucciones dentro de un 'if' debe estar contenido entre llaves "{}", mientras que la condición debe declararse entre paréntesis.
+El conjunto de **instrucciones dentro de un 'if' debe estar contenido entre llaves "{}"**, mientras que **la condición debe declararse entre **paréntesis**.
 
 Habrán notado que la manera de consultar la igualdad en el if está con un doble signo de igual "==". 
 
-Esto se debe a la manera en la que se denominan los distintos operadores en programación, el operador "=" asigna un valor, es decir, si tenemos en nuestro código ```x = y```, lo que estamos haciendo es asignando el valor de la variable X y la variable Y. El operadore para chequear la igualdad es "==", el cual funciona como un booleano, si los datos entre la variable que esté antes y la que esté después del operador son iguales, entonces devuelve un "true" de lo contrario devuelve "false".
+Esto se debe a la manera en la que se denominan los distintos operadores en programación, el operador "=" asigna un valor, es decir, si tenemos en nuestro código ```x = y```, lo que estamos haciendo es asignando el valor de la variable X a la variable Y. El operador para chequear la igualdad es "==", el cual funciona como un booleano, si los datos entre la variable que esté antes y la que esté después del operador son iguales, entonces devuelve un "true" de lo contrario devuelve "false".
 
 Algunos ejemplos:
 ```C#
