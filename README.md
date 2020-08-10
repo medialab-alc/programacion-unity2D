@@ -159,7 +159,7 @@ if (contador == 60){ //<<<--------- Si se cumple esta condición (que el entero 
   activado = true;   //<<<--------- Entonces activado se vuelve true
 }
 ```
-El conjunto de **instrucciones dentro de un 'if' debe estar contenido entre llaves "{}"**, mientras que **la condición debe declararse entre **paréntesis**.
+El conjunto de **instrucciones dentro de un 'if' debe estar contenido entre llaves "{}"**, mientras que **la condición debe declararse entre paréntesis**.
 
 Habrán notado que la manera de consultar la igualdad en el if está con un doble signo de igual "==". 
 
