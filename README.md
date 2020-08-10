@@ -1,6 +1,8 @@
+En este repositorio iremos contando con material complementario y de repaso a lo visto durante las clases.
+
 # Introducción
-Unity maneja un sistema orientado a objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor de para una serie de componentes que pueden ser atados al mismo para modificar y controlar su comportamiento o sus propiedades.
-Si bien dichos componentes pueden ser configurados directamente desde el Inspector de manera gráfica, el uso de scripts nos permite (entre otras cosas) ingresar a dichos componentes y modificar sus valores de manera dinámica, de manera de crear comportamientos más complejos e interactivos para cada uno de estos objetos.
+Unity maneja un sistema orientado a objetos en el cual cada uno de los denominados "GameObjects" funciona como un contenedor para una serie de componentes que pueden ser asociados al mismo para modificar y controlar su comportamiento o sus propiedades.
+Si bien los componentes pueden ser configurados directamente desde el Inspector de manera gráfica, el uso de scripts nos permite (entre otras cosas) ingresar a esos componentes y modificar sus valores de manera dinámica para crear comportamientos más complejos e interactivos para cada uno de estos objetos.
 
 En esta primera introducción iremos desarrollando algunos elementos básicos que necesitamos conocer para trabajar con scripts en C# en Unity.
 
@@ -15,8 +17,8 @@ En esta primera introducción iremos desarrollando algunos elementos básicos qu
 
 ### VIARIABLES
 Una variable es un elemento que nos permite almacenar información de manera dinámica en la memoria de la computadora.
-Normalmente se le asigna un nombre con el cual se asocia esa información para luego acceder a ella desde cualquier parte del programa y utilizarla o modificarla.
-Las variables también están asociadas generalmente a un tipo de dato
+A cada variable se le asigna un nombre con el cual se asocia esa información para luego acceder a ella desde cualquier parte del programa y utilizarla o modificarla.
+Las variables también están asociadas generalmente a un tipo de dato.
 
 **Algunos tipos de variables:**
 
@@ -24,7 +26,7 @@ Las variables también están asociadas generalmente a un tipo de dato
 
 -float: Almacena un número decimal
 
--bool: Almacena un dato del tipo "verdadero" o "falso"
+-bool: Almacena un dato binario del tipo "verdadero" o "falso"
 
 -char: Almacena un caracter
 
@@ -35,7 +37,8 @@ Las variables también están asociadas generalmente a un tipo de dato
 Las variables siempre deben ser declaradas con un nombre, cada nombre debe ser único para cada variable y siempre es recomendable utilizar una sintaxis simple y relacionada a la función u objetivo de la variable.
 **Ej:**
 ```C#
-int velX;
+int vidaTotal;
+Vector2 velocidad;
 bool acelerar;
 string nombre;
 ```
@@ -59,15 +62,15 @@ void Start(){
   nombre = "Carlos";
 }
 ```
-**Recordar que siempre y como en la mayoría de los casos en que declaremos o modifiquemos valores en variables, la línea debe terminar de declararse con un punto y coma ;**
+**Recordar que al declarar inicializar o modificar una variable estamos realizando una instrucción y por lo tanto la línea debe terminar con punto y coma ;**
 
 ### FUNCIONES
 Una función o rutina es un subalgoritmo que forma parte del programa principal y que se encarga de una tarea específica.
 Se trata de un conjunto de instrucciones predefinidas, definido por un nombre y que puede ser llamado desde cualquier parte de nuestro programa.
-Una función puede recibir un dato del programa (variables) y procesarlo para devolver nuevo dato acorde a la tarea que se esté realizando.
+Una función puede recibir un dato del programa (variables) y procesarlo para devolver un nuevo dato acorde a la tarea que se esté realizando.
 
-Unity posee funciones predeterminadas que siguen determinadas reglas más allá de la programación que se coloque dentro, pero también es posible crear nuestras propias funciones desde cero.
-Las funciones también tienen un tipo de variable asociado, el cual define el tipo de variable que devuelven.
+Unity posee funciones predeterminadas que siguen ciertas reglas más allá de la programación que se coloque dentro, pero también es posible crear nuestras propias funciones desde cero.
+Las funciones también tienen un tipo de variable asociado, el cual define el tipo de dato que devuelven.
 
 Siguiendo con la metáfora anterior, si las variables funcionan como cajas que contienen información, las funciones actúan como máquinas, las cuales vamos a alimentar con una o más de estas cajas y luego de procesarlas nos van a devolver un resultado.
 
@@ -79,7 +82,7 @@ Algunos ejemplos de funciones:
 void Start(){
 }
 ```
-La función Start() se ejecuta en el primer frame en que el script es activado, antes de que ningún void Update() corra por primera vez. Se utiliza generalmente para declarar variables y definir todo aquello que queremos que esté seteado desde el comienzo.
+La función Start() se ejecuta en el primer frame en que el script es activado (cuando se inicia el juego), antes de que ningún void Update() corra por primera vez. Se utiliza generalmente para declarar variables y definir todo aquello que queremos que esté seteado desde el comienzo.
 Esta función se ejecuta una sola vez.
 
 ```C#
@@ -93,14 +96,14 @@ void Update(){
 contador = contador + 1;
 }
 ```
-En el primer frame en que la función Update sea llamada contador será igual a 0, al ejecutar la función se le sumará 1. 
+En el primer frame en que la función Update sea llamada la variable contador será igual a 0, al ejecutar la función se le sumará 1. 
 En el siguiente frame contador ahora tendrá un valor de 1, y se le volverá a sumar 1, y así de manera progresiva.
 
 ```C#
 void FixedUpdate(){
 }
 ```
-A diferencia de Update(), la función FixedUpdate() es un loop independiente de los Frames, dependiendo de ciertos factores como la velocidad del procesador el Frame rate (la frecuencia con la que cada frame es llamado en pantalla) puede variar y con ello el tiempo entre cada una de las veces que la función Update() es llamada. FixedUpdate() es llamado siempre en intervalos fijos (la configuración predeterminada es 0.02s o lo que es lo mismo 50 veces por segundo).
+A diferencia de Update(), la función FixedUpdate() es un loop independiente de los Frames, dependiendo de ciertos factores como la velocidad del procesador en cada ordenador, el Frame rate (la frecuencia con la que cada frame es llamado en pantalla) puede variar y con ello el tiempo entre cada una de las veces que la función Update() es llamada. FixedUpdate() es llamado siempre en intervalos fijos (la configuración predeterminada es 0.02s o lo que es lo mismo 50 veces por segundo).
 
 ### CLASES
 Las clases funcionan como contenedores para funciones y variables, nuevamente con la misma metáfora anterior, podríamos decir que las clases son las fábricas en las cuales agrupamos las máquinas y cajas dependiendo de su función específica o de los distintos usos que querramos darles.
@@ -112,7 +115,7 @@ public class NombreDelScript : MonoBehaviour
 ```
 **El nombre de la clase siempre debe ser el mismo que el nombre del script, por lo que al modificar uno hay que recordar siempre modificar el otro**
 
-Al igual que en las funciones, el contenido de una clase siempre debe estar delimitado con llaves "{}" por lo que la manera correcta de declarar una clase siempre debe ser:
+Al igual que en las funciones, el contenido de una clase siempre debe estar en un bloque de programación delimitado con llaves "{}" por lo que la manera correcta de declarar una clase siempre debe ser:
 ```C#
 public class NombreDelScript : MonoBehaviour
 {
