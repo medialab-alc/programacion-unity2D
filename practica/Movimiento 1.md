@@ -25,7 +25,7 @@ Particularmente vamos a estar accediendo a la variable "position", de tipo Vecto
 Para acceder a la variable position del objeto en el cual esté colocado el script debemos hacerlo de la siguiente manera:
 ```C#
 gameObject.tranform.position
-///////////////////////////// A su vez podemos también acceder al componente X y al componente Y del vector position por separado
+///////////// A su vez podemos también acceder al componente X y al componente Y del vector position por separado
 gameObject.tranform.position.x
 gameObject.tranform.position.y
 ```
