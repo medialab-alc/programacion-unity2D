@@ -44,9 +44,9 @@ Siguiendo lo visto en clase, se deberá utilizar las funciones *void Start()* y 
 
   **1:** Que el objeto se mueva de manera constante en una dirección cualquiera.
   
-  **2:** Que al llegar a un punto determinado dado por algunas coordenadas X e Y a elección, se invierta el sentido del movimiento ("Si la posición actual es menor a la posición deseada moverse hacia adelante, si no...")
+  **2:** Que al llegar a un punto dado por algunas coordenadas X e Y a elección, se invierta el sentido del movimiento ("Si la posición actual es menor a la posición deseada moverse hacia adelante, si no...")
   
-  **3:** Que al volver al punto de partida inicial, el objeto vuelva a invertir la dirección de movimiento.
+  **3:** Que al volver al punto inicial, el objeto vuelva a invertir la dirección de movimiento.
   
 
 
