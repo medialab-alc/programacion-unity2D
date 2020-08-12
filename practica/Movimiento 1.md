@@ -21,7 +21,7 @@ OPCIONAL: **void FixedUpdate(){}** : La función "Update" se ejecuta una vez por
 **COMPONENTES**
 Vamos a trabajar con el componente [Transform](https://github.com/medialab-alc/programacion-unity2D/blob/master/componentes/Transform%20-%201.md), el cual determina la posición, rotación y escala del objeto en el espacio virtual.
 
-Particularmente vamos a estar accediendo a la variable "position", de tipo Vector3 (Al estar trabajando en Unity 2D también la podemos considerar como un Vector2).
+Particularmente vamos a estar accediendo a la variable "position", de tipo Vector3.
 Para acceder a la variable position del objeto en el cual esté colocado el script debemos hacerlo de la siguiente manera:
 ```C#
 gameObject.tranform.position
