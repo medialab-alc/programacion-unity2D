@@ -10,3 +10,4 @@ Siguiendo lo visto en clase, se deberá utilizar las funciones *void Start()* y 
   2: Que al llegar a un punto determinado dado por algunas coordenadas X e Y a elección, se invierta el sentido del movimiento ("Si la posición actual es menor a la posición deseada moverse hacia adelante, si no...")
   3: Que al volver al punto de partida inicial, el objeto vuelva a invertir la dirección de movimiento.
   
+D
