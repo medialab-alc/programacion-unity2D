@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,8 @@ public class jugadorMove: MonoBehaviour
     public float dirX;
     public float moveSpeed;
     public float velSalto;
+
+    bool grounded = false;
     
     float posX;
     float posY;
@@ -24,12 +26,14 @@ public class jugadorMove: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             rb.AddForce(Vector2.up * velSalto, ForceMode2D.Impulse);
         }
+
         // Si se presiona la tecla R, reseteamos la posición y velocidad del personaje a su posición inicial
         if (Input.GetKeyDown(KeyCode.R)){
             transform.position = new Vector2(posX,posY);
@@ -47,6 +51,7 @@ public class jugadorMove: MonoBehaviour
         if (other.gameObject.tag.Equals("Plataforma"))
         {
             this.transform.parent = other.transform;
+            grounded = true;
         }
 
     }
@@ -54,6 +59,7 @@ public class jugadorMove: MonoBehaviour
     void OnCollisionExit2D(Collision2D other)
     {
         this.transform.parent = null;
+        grounded = false;
     }
 
 }
