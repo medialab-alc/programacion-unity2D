@@ -1,3 +1,5 @@
+[En construcción]
+
 # Propiedades
 Propiedad | Función
 ------------ | -------------
