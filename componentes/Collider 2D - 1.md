@@ -56,9 +56,55 @@ Nombre | Función
 OnCollisionEnter2D(Collision2D) | Se envia cuando un collider entrante entra en contacto con el collider de este objeto
 OnCollisionExit2D(Collision2D) | Enviado cuando un collider en otro objeto deja de tocar el collider de este objeto
 OnCollisionStay2D(Collision2D) | Enviado cada frame donde un collider en otro objeto está tocando el collider de este objeto
-OnTriggerEnter2D(Collider2D) | Enviado cuando otro objeto ingresa a un trigger collider adjunto a este objeto
-OnTriggerExit2D(Collider2D) | Enviado cuando otro objeto deja un trigger collider adjunto a este objeto
-OnTriggerStay2D(Collider2D) | Enviado cada frame donde otro objeto está dentro de un trigger collider adjunto a este objeto
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) OnTriggerEnter2D(Collider2D) | Enviado cuando otro objeto ingresa a un trigger collider adjunto a este objeto
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) OnTriggerExit2D(Collider2D) | Enviado cuando otro objeto deja un trigger collider adjunto a este objeto
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) OnTriggerStay2D(Collider2D) | Enviado cada frame donde otro objeto está dentro de un trigger collider adjunto a este objeto
 
 # Ejemplo
-[...]
+- El objeto se destruye cuando cualquier otro objeto entra en el trigger.
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+{
+    void Start()
+    {
+    }
+    
+    void Update()
+    {
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+      Destroy(gameObject);
+    }
+}
+```
+
+- El objeto se destruye solo si el Tag del objeto al que pertenece el collider que ingresa al trigger es "Player"
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+{
+    void Start()
+    {
+    }
+    
+    void Update()
+    {
+    }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+      if (other.gameObject.tag.Equals("Player")){
+        Destroy(gameObject);
+      }
+    }
+}
+```
