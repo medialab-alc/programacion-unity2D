@@ -46,7 +46,7 @@ SetActive(bool) | Activa/Desactiva el GameObject.
 # Funciones Estáticas
 Nombre | Función
 -----------|-----------
-! Find(String) | Devuelve un GameObject con el nombre indicado
+![#f03c15] Find(String) | Devuelve un GameObject con el nombre indicado
 FindGameObjectsWithTag(string) | Devuelve una lista de GameObjects activos etiquetados con el tag indicado. Devuelve un array vacío si ningún GameObject fue encontrado.
 FindWithTag | Devuelve un GameObject activo etiquetado con el tag indicado. Devuelve null si ningún GameObject fue encontrado.
 
