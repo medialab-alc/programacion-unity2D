@@ -39,7 +39,7 @@ CompareTag(String) | La función devuelve un booleano, el estado es "true" si el
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) GetComponent<*Tipo de componente*>() | Devuelve un componente del tipo indicado si el GameObject posee alguno adjuntado, o null si no lo tiene.
 GetComponentInChildren<*Tipo de componente*>() | Devuelve el componente del tipo indicado en el GameObject o en alguno de sus hijos.
 GetComponentInParent<*Tipo de componente*>() | Devuelve el componente del tipo indicado en el GameObject o cualquiera de sus padres.
-SendMessage(*Nombre de la función*, *Valor opcional a pasar a la función indicada*) | Llama la función con el nombre especificado en cada MonoBehaviour de este objeto.
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) SendMessage(*Nombre de la función*, *Valor opcional a pasar a la función indicada*) | Llama la función con el nombre especificado en cada MonoBehaviour de este objeto.
 SendMessageUpwards(*Nombre de la función*, *Valor opcional a pasar a la función indicada*) | Llama la función con el nombre especificado en todos los MonoBehaviour de este juego.
 SetActive(bool) | Activa/Desactiva el GameObject.
 
