@@ -36,7 +36,7 @@ Nombre | Función
 AddComponent<*Tipo de componente*>() | Agrega una clase componente de un tipo dado al GameObject. Ej: ```AddComponent<BoxCollider2D>();```
 BroadcastMessage(*Nombre de la función*, *Valor opcional a pasar a la función indicada*) | Llama la función con el nombre específicado en todos los MonoBehaviour en este objeto y en cualquiera de sus hijos (Esta función la veremos en profundidad más adelante)
 CompareTag(String) | La función devuelve un booleano, el estado es "true" si el Tag del GameObject bajo el cual se llama la función posee el tag dado al llamar la función, el estado que devuelve es "false" en caso contrario.
-GetComponent<*Tipo de componente*>() | Devuelve un componente del tipo indicado si el GameObject posee alguno adjuntado, o null si no lo tiene.
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) GetComponent<*Tipo de componente*>() | Devuelve un componente del tipo indicado si el GameObject posee alguno adjuntado, o null si no lo tiene.
 GetComponentInChildren<*Tipo de componente*>() | Devuelve el componente del tipo indicado en el GameObject o en alguno de sus hijos.
 GetComponentInParent<*Tipo de componente*>() | Devuelve el componente del tipo indicado en el GameObject o cualquiera de sus padres.
 SendMessage(*Nombre de la función*, *Valor opcional a pasar a la función indicada*) | Llama la función con el nombre especificado en cada MonoBehaviour de este objeto.
@@ -46,7 +46,7 @@ SetActive(bool) | Activa/Desactiva el GameObject.
 # Funciones Estáticas
 Nombre | Función
 -----------|-----------
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 'Find(String)' | Devuelve un GameObject con el nombre indicado
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Find(String) | Devuelve un GameObject con el nombre indicado
 FindGameObjectsWithTag(string) | Devuelve una lista de GameObjects activos etiquetados con el tag indicado. Devuelve un array vacío si ningún GameObject fue encontrado.
 FindWithTag | Devuelve un GameObject activo etiquetado con el tag indicado. Devuelve null si ningún GameObject fue encontrado.
 
@@ -57,7 +57,7 @@ FindWithTag | Devuelve un GameObject activo etiquetado con el tag indicado. Devu
 # Funciones Estáticas
 Nombre | Función
 -----------|-----------
-Destroy(*Objeto*,float) | Elimina un gameobject, componente o asset. Se debe indicar el objeto y el tiempo luego del cual el mismo será destruido.
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Destroy(*Objeto*,float) | Elimina un gameobject, componente o asset. Se debe indicar el objeto y el tiempo luego del cual el mismo será destruido.
 DontDestroyOnLoad(*Objeto*) | Hace que el GameObject indicado no sea destruído al cargar una nueva escena.
 FindObjectOfType(*Tipo de objeto*) | Devuelve el primer objeto activo cargado del tipo indicado.
 FindObjectsOfType(*Tipo de objeto*) | Devuelve una lista de todos los objetos activos cargados del tipo indicado.
