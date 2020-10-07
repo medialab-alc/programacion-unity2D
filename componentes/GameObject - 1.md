@@ -63,3 +63,21 @@ FindObjectOfType(*Tipo de objeto*) | Devuelve el primer objeto activo cargado de
 FindObjectsOfType(*Tipo de objeto*) | Devuelve una lista de todos los objetos activos cargados del tipo indicado.
 Instantiate(*Objeto original*, Vector3, Quaternion, Transform) | Clona el objeto original y devuelve el clon, al mismo se le puede indicar la posición en la cual debe crearse el clon (Vector3), los valores de rotación (Quaternion) y el transform padre (Transform), estos inputs son opcionales, la función puede llamarse solamente con el objeto a clonar.
 
+
+# EJEMPLO DE FIND + GETCOMPONENT
+En el siguiente ejemplo, el script cuenta con una imagen de tipo "sprite" (la cual es asignada usando el inspector), el script busca al objeto de nombre "personaje", crea una variable a la que asociar el componente "SpriteRenderer" de dicho objeto, y finalmente reemplaza la variable "Sprite" de ese componente por el sprite definido por el script.
+```C#
+using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+{
+    public Sprite imagenNueva;
+    public SpriteRenderer personaje;
+    
+    void Start()
+    {
+        personaje = gameObject.Find("personaje").GetComponent<SpriteRenderer>();
+        personaje.sprite = imagenNueva;
+    }
+}
+```
